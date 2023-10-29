@@ -1,0 +1,27 @@
+body {
+  background-color: purple; /* altera o fundo para roxo */
+  color: white; /* altera a cor do texto para branco */
+  text-shadow: 10px 5px 0px #000000;  
+}
+
+h1 {
+  text-transform: uppercase; 
+  font-size: 45px;
+  font-weight: bold;
+
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  
+}
+
+
+.botao {
+  padding: 5px 10px;
+  background-color:inherit;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 e 6 - Listeners e CSS</title>
+    <style>
+        body {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Clique aqui</button>
+    <h1>passe o MOUSE para trocar de cor</h1>
+    
+</body>
+<script>
+        //Crie um botão HTML e adicione um listener (js) que ao clicar no botão execute uma
+        // função que dê um alert com o texto "Olá, estou usando um listener onclick"
+        const button = document.querySelector('button');//busca o botão no html
+        button.addEventListener('click', () =>//adiciona um listener ao botão
+            alert('Olá, estou usando um listener onclick'));//executa a funcao
+
+        //Utilizando apenas uma tag HTML, faça um css que altere a cor do body:
+        const body = document.querySelector('body');
+        const h1 = document.querySelector('h1');
+        h1.addEventListener('mouseover', () => {
+            body.style.backgroundColor = 'white';
+            h1.style.color = 'black';
+            h1.innerText = 'agora não pode ser alterado';
+        })
+    </script>
+</html>

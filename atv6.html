@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>6 - CSS</title>
+    <link id="custom-style" rel="stylesheet" type="text/css" href="cssDa6.css" disabled>
+</head>
+
+<body style="text-align: center">
+    <h1>Título do Site</h1>
+    <p>Este é um parágrafo de exemplo.</p>
+    <button class="botao" onclick="toggleStyle()">Alterar Estilo</button>
+
+    <script>
+        function toggleStyle() {
+            var linkElement = document.getElementById('custom-style');
+            linkElement.disabled = !linkElement.disabled;
+        }
+    </script>
+</body>
+
+</html>

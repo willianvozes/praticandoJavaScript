@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - Manipulando HTML</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Altere o conteúdo do html a seguir de "Olá" para "Tchau":-->
+    <div id="idDiv1">
+        <h1 id="idTexto">Olá</h1>
+    </div>
+
+    <script>
+        //Utilizando getElementById
+        document.getElementById("idTexto").innerHTML = "Tchau";
+
+        //Utilize a função appendChild() para inserir uma div dentro de outr div.
+        var divPai = document.getElementById("idDiv1");//obtem ref da divpai
+        var divFilha = document.createElement("div");//cria div
+        divFilha.setAttribute("id", "idDiv2");//adiciona id
+        divPai.appendChild(divFilha);//adiciona filha dentro do pai
+        var h1Element = document.createElement("h1");
+        h1Element.textContent = "oi mundo";//adiciona frase: "oi mundo"
+        h1Element.classList.add("classText");//adiciona classe "classText";
+        divFilha.appendChild(h1Element);//adiciona h1 dentro da div
+
+        //Utilizando getElementsByClassName
+        var elements = document.getElementsByClassName("classText");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = "tchau mundo";
+        }
+    </script>
+</body>
+
+</html>
